@@ -178,7 +178,7 @@ input:focus {
   background-color: #f6f5fa;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   border-radius: 32px;
-  padding: 3rem;
+  padding: 2rem;
   font-family: "Roboto";
   color: black;
   justify-content: space-between;
@@ -211,7 +211,7 @@ input:focus {
 #info {
   align-items: center;
   justify-content: space-between;
-  height: 40%;
+  height: 45%;
 }
 
 #temp-converter {
@@ -228,11 +228,6 @@ input:focus {
   letter-spacing: 0.25rem;
   font-family: "Cormorrant SC";
   text-transform: uppercase;
-}
-
-#info__date {
-  font-size: 1.2rem;
-  text-align: center;
 }
 
 .justifyend {
@@ -254,6 +249,20 @@ input:focus {
 }
 #info__location {
   text-align: center;
+}
+
+#info__datedouble,
+#info__timedouble {
+  text-align: center;
+  gap: 0.25em;
+  /* border: black 2px solid; */
+}
+
+#info__timeheader,
+#info__dateheader {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: 300;
 }
 
 #svg-holder {
