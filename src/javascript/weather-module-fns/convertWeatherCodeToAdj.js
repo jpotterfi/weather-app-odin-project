@@ -36,3 +36,4 @@ function convertWeatherCodeToAdj(code) {
     return "Cloudy";
   }
 }
+export { convertWeatherCodeToAdj };

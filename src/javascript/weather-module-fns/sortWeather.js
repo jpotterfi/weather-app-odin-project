@@ -1,4 +1,7 @@
+import { convertTemp } from "../conversion-module-fns/convertTemp";
 import { timezoneToData } from "../time-date-functions/timezoneToData";
+import { convertWeatherCodeToAdj } from "./convertWeatherCodeToAdj";
+import { getWeatherImage } from "./getWeatherImage";
 
 function sortWeather(weatherData) {
   let timezoneInfo = weatherData.timezone;
@@ -13,8 +16,10 @@ function sortWeather(weatherData) {
   let localDateInfo = timezoneData.localDate;
   let localTimeInfo = timezoneData.localTime;
   let meridianInfo = timezoneData.meridian;
+  let weatherImage = getWeatherImage(weatherAdjective, meridianInfo);
   let timeOfDayInfo = timezoneData.timeOfDay;
   let formattedTimeInfo = timezoneData.formattedTime;
+  let convertedTemperature = convertTemp(tempInfo);
 
   let info = {
     city: cityInfo,
@@ -24,11 +29,14 @@ function sortWeather(weatherData) {
     temp: tempInfo,
     weather: weatherInfo,
     weatherAdj: weatherAdjective,
+    weatherImg: weatherImage,
     localDate: localDateInfo,
     localTime: localTimeInfo,
     meridian: meridianInfo,
     timeOfDay: timeOfDayInfo,
     formattedTime: formattedTimeInfo,
+    formattedWeather: weatherAdjective + " " + timeOfDayInfo,
+    convertedTemp: convertedTemperature,
   };
   // console.table(info);
 

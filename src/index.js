@@ -1,9 +1,13 @@
 import "./style.css";
-import Icon from "./weather-icons/day/113.svg";
+import Icon from "./weather-icons/day/clear.svg";
 import Location from "./material-icons/location.svg";
 import { weatherModule } from "./javascript/weatherModule";
 import { add, getTime, sub } from "date-fns";
 import { formatInTimeZone, utcToZonedTime } from "date-fns-tz";
+import {
+  getConversion,
+  setConversion,
+} from "./javascript/conversion-module-fns/conversionModule";
 
 const locationSVG = new Image();
 locationSVG.src = Location;
@@ -15,6 +19,8 @@ myIcon.src = Icon;
 
 const element = document.getElementById("image-holder");
 element.appendChild(myIcon);
+
+setConversion("celsius");
 
 // let searchbar = document.getElementById("searchbar");
 // searchbar.addEventListener("keyup", function onEvent(e) {
