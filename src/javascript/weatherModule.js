@@ -1,6 +1,6 @@
-import { displayInfo } from "./displayInfo";
-import { getWeather } from "./getWeather";
-import { sortWeather } from "./sortWeather";
+import { displayInfo } from "./weather-module-fns/displayInfo";
+import { getWeather } from "./weather-module-fns/getWeather";
+import { sortWeather } from "./weather-module-fns/sortWeather";
 
 async function weatherModule(location) {
   let weatherObj = await getWeather(location);
