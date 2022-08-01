@@ -11,15 +11,16 @@ import {
 
 setConversion("fahrenheit");
 weatherModule("Tokyo");
+let currentLocation = "tokyo";
 
 let symbol = document.getElementById("symbol");
 symbol.addEventListener("click", function () {
   if (getConversion() == "fahrenheit") {
     setConversion("celsius");
-    weatherModule("Takoma Park");
+    weatherModule(currentLocation);
   } else if (getConversion() == "celsius") {
     setConversion("fahrenheit");
-    weatherModule("Takoma Park");
+    weatherModule(currentLocation);
   }
 });
 
@@ -27,6 +28,7 @@ let searchbar = document.getElementById("searchbar");
 searchbar.addEventListener("keyup", function onEvent(e) {
   if (e.key === "Enter") {
     console.log(searchbar.value);
+    currentLocation = searchbar.value;
     weatherModule(searchbar.value);
   }
 });
