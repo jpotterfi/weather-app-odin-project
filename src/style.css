@@ -164,10 +164,11 @@ input:focus {
 .searchbar {
   text-align: center;
   height: 10%;
+  max-width: 80%;
   font-family: "Roboto";
   font-weight: 600;
   background-color: inherit;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .card {
@@ -181,7 +182,6 @@ input:focus {
   padding: 2rem;
   font-family: "Roboto";
   color: black;
-  justify-content: space-between;
 }
 
 #location {
@@ -206,13 +206,12 @@ input:focus {
 #image-holder {
   justify-content: center;
   height: 40%;
-  padding-top: 4rem;
 }
 
 #info {
   align-items: center;
   justify-content: space-between;
-  height: 50%;
+  height: 100%;
 }
 
 #temp-converter {

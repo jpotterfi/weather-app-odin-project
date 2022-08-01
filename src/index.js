@@ -9,6 +9,9 @@ import {
   setConversion,
 } from "./javascript/conversion-module-fns/conversionModule";
 
+setConversion("fahrenheit");
+weatherModule("Tokyo");
+
 let symbol = document.getElementById("symbol");
 symbol.addEventListener("click", function () {
   if (getConversion() == "fahrenheit") {
@@ -20,16 +23,13 @@ symbol.addEventListener("click", function () {
   }
 });
 
-setConversion("fahrenheit");
-
-// let searchbar = document.getElementById("searchbar");
-// searchbar.addEventListener("keyup", function onEvent(e) {
-//   if (e.key === "Enter") {
-//     console.log(searchbar.value);
-//     weatherModule(searchbar.value);
-//   }
-
-// });
+let searchbar = document.getElementById("searchbar");
+searchbar.addEventListener("keyup", function onEvent(e) {
+  if (e.key === "Enter") {
+    console.log(searchbar.value);
+    weatherModule(searchbar.value);
+  }
+});
 
 ///////////////////
 
@@ -154,5 +154,3 @@ setConversion("fahrenheit");
 // //japan 32400 | 9
 // //takoma park -14400 | -4
 // //hawaii -36000 | - 10
-
-weatherModule("Tokyo");
