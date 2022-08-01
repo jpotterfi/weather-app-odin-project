@@ -1,5 +1,7 @@
 import { compareDesc } from "date-fns";
 import { getConversion } from "../conversion-module-fns/conversionModule";
+import LocationBlack from "../../material-icons/location.svg";
+import LocationWhite from "../../material-icons/locationwhite.svg";
 
 function displayInfo(info) {
   console.table(info);
@@ -11,6 +13,7 @@ function displayInfo(info) {
   let tempAnchor = document.getElementById("info__temp");
   let symbolAnchor = document.getElementById("symbol");
   let weatherImageAnchor = document.getElementById("weather-image");
+
   localDateAnchor.innerText = info.localDate;
   localTimeAnchor.innerText = info.formattedTime;
   locationAnchor.innerText = info.formattedLocation;

@@ -205,13 +205,14 @@ input:focus {
 
 #image-holder {
   justify-content: center;
-  height: 50%;
+  height: 40%;
+  padding-top: 4rem;
 }
 
 #info {
   align-items: center;
   justify-content: space-between;
-  height: 45%;
+  height: 50%;
 }
 
 #temp-converter {
@@ -225,7 +226,7 @@ input:focus {
 
 #info__written {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   letter-spacing: 0.25rem;
   font-family: "Cormorrant SC";
   text-transform: uppercase;
@@ -245,25 +246,35 @@ input:focus {
   align-items: center;
 }
 
+#location-svg {
+  width: 12.5%;
+}
+
 #info__locationdouble {
   align-items: center;
+  justify-content: center;
+  height: 20%;
+  gap: 1rem;
 }
 #info__location {
   text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
 }
 
 #info__datedouble,
 #info__timedouble {
+  font-size: 1.25rem;
   text-align: center;
-  gap: 0.25em;
+  gap: 0.5em;
+  font-weight: 800;
   /* border: black 2px solid; */
 }
 
 #info__timeheader,
 #info__dateheader {
-  text-transform: uppercase;
-  text-decoration: underline;
   font-weight: 300;
+  text-transform: uppercase;
 }
 
 #svg-holder {
