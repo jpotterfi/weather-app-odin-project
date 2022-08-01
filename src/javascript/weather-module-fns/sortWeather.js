@@ -16,8 +16,8 @@ function sortWeather(weatherData) {
   let localDateInfo = timezoneData.localDate;
   let localTimeInfo = timezoneData.localTime;
   let meridianInfo = timezoneData.meridian;
-  let weatherImage = getWeatherImage(weatherAdjective, meridianInfo);
   let timeOfDayInfo = timezoneData.timeOfDay;
+  let weatherImage = getWeatherImage(weatherAdjective, timeOfDayInfo);
   let formattedTimeInfo = timezoneData.formattedTime;
   let convertedTemperature = convertTemp(tempInfo);
 
@@ -36,7 +36,7 @@ function sortWeather(weatherData) {
     timeOfDay: timeOfDayInfo,
     formattedTime: formattedTimeInfo,
     formattedWeather: weatherAdjective + " " + timeOfDayInfo,
-    convertedTemp: convertedTemperature,
+    convertedTemp: convertedTemperature + "°",
   };
   // console.table(info);
 

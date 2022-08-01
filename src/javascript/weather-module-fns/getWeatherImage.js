@@ -16,10 +16,10 @@ import CloudAM from "../../weather-icons/day/cloud.svg";
 // const locationHolder = document.getElementById("svg-holder");
 // locationHolder.appendChild(locationSVG);
 
-function getWeatherImage(adjective, meridian) {
+function getWeatherImage(adjective, timeOfDay) {
   const weatherSVG = new Image();
 
-  if (meridian == "AM") {
+  if (timeOfDay == "morning" || timeOfDay == "afternoon") {
     if (adjective == "Thundery") {
       weatherSVG.src = ThunderAM;
     } else if (adjective == "Drizzling") {
@@ -36,7 +36,7 @@ function getWeatherImage(adjective, meridian) {
       weatherSVG.src = OtherAM;
     }
   }
-  if (meridian == "PM") {
+  if (timeOfDay == "evening" || timeOfDay == "night") {
     if (adjective == "Thundery") {
       weatherSVG.src = ThunderPM;
     } else if (adjective == "Drizzling") {
@@ -53,7 +53,7 @@ function getWeatherImage(adjective, meridian) {
       weatherSVG.src = OtherPM;
     }
   }
-  return weatherSVG;
+  return weatherSVG.src;
 }
 export { getWeatherImage };
 

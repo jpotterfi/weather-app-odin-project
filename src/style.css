@@ -269,3 +269,12 @@ input:focus {
 #svg-holder {
   width: 2rem;
 }
+
+#info__tempdouble {
+  align-items: center;
+}
+
+#symbol {
+  font-size: 6rem;
+  font-weight: 900;
+}

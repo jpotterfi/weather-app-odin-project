@@ -9,18 +9,18 @@ import {
   setConversion,
 } from "./javascript/conversion-module-fns/conversionModule";
 
-const locationSVG = new Image();
-locationSVG.src = Location;
-const locationHolder = document.getElementById("svg-holder");
-locationHolder.appendChild(locationSVG);
+let symbol = document.getElementById("symbol");
+symbol.addEventListener("click", function () {
+  if (getConversion() == "fahrenheit") {
+    setConversion("celsius");
+    weatherModule("Takoma Park");
+  } else if (getConversion() == "celsius") {
+    setConversion("fahrenheit");
+    weatherModule("Takoma Park");
+  }
+});
 
-const myIcon = new Image();
-myIcon.src = Icon;
-
-const element = document.getElementById("image-holder");
-element.appendChild(myIcon);
-
-setConversion("celsius");
+setConversion("fahrenheit");
 
 // let searchbar = document.getElementById("searchbar");
 // searchbar.addEventListener("keyup", function onEvent(e) {
@@ -155,4 +155,4 @@ setConversion("celsius");
 // //takoma park -14400 | -4
 // //hawaii -36000 | - 10
 
-weatherModule("Takoma Park");
+weatherModule("Tokyo");
